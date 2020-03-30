@@ -19,11 +19,11 @@ const alignments = {
 }
 
 const transformRequest = (url) => {
-    const hasQuery = url.indexOf("?") !== -1;	  
-    const suffix = hasQuery ? "&pluginName=journalismScrollytelling" : "?pluginName=journalismScrollytelling";	  
+    const hasQuery = url.indexOf("?") !== -1;
+    const suffix = hasQuery ? "&pluginName=journalismScrollytelling" : "?pluginName=journalismScrollytelling";
     return {
       url: url + suffix
-    }	  
+    }
 }
 
 class App extends Component {
@@ -125,7 +125,7 @@ class App extends Component {
                     }
                     <div id="features" className={alignments[config.alignment]}>
                         {
-                            config.chapters.map(chapter => 
+                            config.chapters.map(chapter =>
                                 <Chapter key={chapter.id} theme={theme} {...chapter} currentChapterID={currentChapterID}/>
                             )
                         }
